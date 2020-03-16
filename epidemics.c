@@ -617,26 +617,22 @@ static void draw_ui_panel(int offx, int offy, int width, int height,
         int x1=30;
         int x2=220;
         int y=10;
-
-        draw_ui_panel_text(settings->text_font, settings->text_color,
-                           offx+x1, offx+x2, offy+(y+=10),
-                           "Dimension:", "%d", settings->simulation_grid_dimension);
         
         draw_ui_panel_text(settings->text_font, settings->text_color,
                            offx+x1, offx+x2, offy+(y+=10),
-                           "Timestep:", "%f", settings->simulation_timestep);
+                           "Lethality:", "%f", settings->lethality);
         
         draw_ui_panel_text(settings->text_font, settings->text_color,
                            offx+x1, offx+x2, offy+(y+=10),
-                           "Step immun:", "%d", settings->max_infected_value);
+                           "Infectiousness:", "%f", settings->infectiousness);
         
         draw_ui_panel_text(settings->text_font, settings->text_color,
                            offx+x1, offx+x2, offy+(y+=10),
-                           "Step death:", "%f", settings->lethality);
+                           "Immunity:", "%d", settings->max_infected_value);
         
         draw_ui_panel_text(settings->text_font, settings->text_color,
                            offx+x1, offx+x2, offy+(y+=10),
-                           "Step infect:", "%f", settings->infectiousness);
+                           "Immunization:", "%f", settings->immunization_chance);
 
         y += 30;
 
